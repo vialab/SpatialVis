@@ -1,0 +1,212 @@
+.backUnselect {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 28;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.graphChgButtons {
+    width: 110px;
+    line-height: 35px;
+    height: 35px;
+}
+
+#trailCanvas {
+    z-index: 10;
+}
+
+#anntCanvas {
+    z-index: 15;
+    cursor: default;
+}
+
+#graphCont {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+}
+
+#videoRibbon {
+    z-index: 50;
+    left: 4.5%;
+    top: 0px;
+    position: absolute;
+    height: 110px;
+    background-color: #000;
+    width: 96%;
+}
+
+.videoThumb.thumbSelect {
+    border-color: rgb(252, 104, 255);
+}
+
+.videoThumb {
+    border-color: #000;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.videoThumb:hover {
+    border-color: rgb(252, 104, 255);
+}
+
+#rib0 {
+    border-left-width: 4px;
+}
+
+#rib9 {
+    border-right-width: 4px;
+}
+
+#myVideo {
+    z-index: 1;
+}
+
+#vertLine {
+    z-index: 10;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background-color: #FE0000;
+}
+
+
+
+#vidContainer {
+    position: absolute;
+    width: 100%;
+}
+
+.videoCanvas {
+    top: 130px;
+    position: absolute;
+    left: 4.5%;
+    width: 95%;
+}
+
+#vidControls {
+    height: 10px;
+    position: relative;
+    width: 101%;
+    left: -0.5%;
+    z-index: 50;
+}
+
+#vidControls:hover #controls {
+    opacity: 1;
+}
+
+#controls {
+    opacity: 0;
+    transition: opacity 1s;
+    background-color: #e7f3ff;
+    width: 80px;
+    position: absolute;
+    top: -38px;
+    border-radius: 5%;
+}
+
+#controls div {
+    float: left;
+    padding-right: 5px;
+}
+
+#controls img:hover {
+    background-color: #00d36a;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#vPlay {
+    padding-left: 5px;
+}
+
+#scrubber {
+    -webkit-appearance: none;
+    background-color: #CCC;
+    height: 15px;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.6);
+    left: -2px;
+    margin-top: -7px;
+}
+
+#scrubber::-webkit-slider-thumb { /*input[type="range"]::-webkit-slider-thumb*/ 
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FFF;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+/* Graph CSS */
+
+.x {
+    font-size: 10px;
+}
+
+.y {
+    font-size: 12px;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.area {
+    fill: steelblue; /*rgb(189, 229, 255);*/
+    stroke: steelblue; /*rgb(189, 229, 255);*/
+    stroke-width: 1px;
+    clip-path: url(#clip);
+}
+
+.brush, .extent {
+  stroke: #fff;
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+
+.graphChooserCont {
+    background-color: #fdfde0;
+    position: fixed;
+    border: 8px solid #000;
+    border-radius: 20px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#topGraph:hover, #botGraph:hover {
+    color: steelblue;
+}
+
+.chgGraph {
+    position: fixed;
+    width: 40px;
+    height: 35px;
+    margin-top: -70px;
+    font-size: 9px;
+    margin-left: -5px;
+    line-height: 15px;
+    border-radius: 10px;
+    padding-top: 3px;
+}
+
+.chgGraph:active {
+    margin-top: -69px;
+    top: auto;
+    position: fixed;
+}

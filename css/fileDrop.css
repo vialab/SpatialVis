@@ -1,0 +1,151 @@
+#fileInfo, #videoInfo {
+    
+    font-family: Tahoma, Geneva, sans-serif;
+    opacity: 0;
+    transition: opacity 1s;
+    margin-top: 50px;
+    line-height: 40px;
+}
+
+/* For dragging and dropping files
+ *  over elements within middleContainer
+ 
+ * 
+*/
+
+#dropMask {
+    z-index: 99;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* submit buttons for logfile and video */
+#fileSubmit, #videoSubmit {
+    opacity: 0;
+    margin: auto;
+    width: 25%;
+    font-weight: 900;
+    background-color: #B2DFEE;
+    border-style: solid;
+    border-color: #009ACD;
+    border-width: 2px;
+    border-radius: 20px;
+    padding: 10px;
+    transition: opacity 1s;
+    animation: submitColour 2s ease-in-out 1 forwards paused;
+    -webkit-animation: submitColour 2s ease-in-out 1 forwards paused; /* Safari and Chrome */
+    margin-top: 50px;
+}
+
+@keyframes submitColour {
+    from {
+        background-color: #B2DFEE;
+        border-color: #009ACD;
+    }
+    to {
+        background-color: #ff6281;
+        border-color: #CC0033;
+    }
+}
+
+@-webkit-keyframes submitColour { /* Safari and Chrome */
+    from {
+        background-color: #B2DFEE;
+        border-color: #009ACD;
+    }
+    to {
+        background-color: #ff6281;
+        border-color: #CC0033;
+    }
+}
+
+/* display: table-cell; */
+#dropInfo {
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+    overflow: hidden;
+}
+
+#fileInput, #videoInput {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/*
+ *  Animations
+ */
+
+#logFileElements {
+    animation: logFileMove 2500ms ease-in-out 1 forwards paused;
+    -webkit-animation: logFileMove 2500ms ease-in-out 1 forwards paused; /* Safari and Chrome */
+    margin-top: 50px;
+}
+
+@keyframes logFileMove {
+    0% {
+        right: 0px;
+        opacity: 1;
+    }
+    75% {
+        right: 30%;
+        opacity: 0.5
+    }
+    
+    100% {
+        right: 30%;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes logFileMove { /* Safari and Chrome */
+    0% {
+        right: 0px;
+        opacity: 1;
+    }
+    75% {
+        right: 30%;
+        opacity: 0.5
+    }
+    
+    100% {
+        right: 30%;
+        opacity: 0;
+    }
+}
+
+#visualMediaFileElements {
+    animation: visualMediaFileMove 2s ease-in-out 1 forwards paused;
+    -webkit-animation: visualMediaFileMove 2s ease-in-out 1 forwards paused; /* Safari and Chrome */
+    opacity: 0;
+    left: 0px;
+    margin-top: -170px;
+}
+
+@keyframes visualMediaFileMove {
+    from {
+        top: 0px;
+        opacity: 0;
+    }
+    to {
+        top: -415px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes visualMediaFileMove { /* Safari and Chrome */
+    from {
+        top: 0px;
+        opacity: 0;
+    }
+    to {
+        top: -415px;
+        opacity: 1;
+    }
+}
